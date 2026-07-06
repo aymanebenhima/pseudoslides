@@ -3,26 +3,30 @@
 @import 'reveal.js/plugin/highlight/monokai.css';
 
 :root {
-  --primary-color: #7b2ff7;
-  --secondary-color: #00d2ff;
-  --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  --primary-color: #ff793f;
+  --secondary-color: #ffda79;
+  --bg-color-1: #2c2c54;
+  --bg-color-2: #474787;
+  --bg-gradient: linear-gradient(135deg, var(--bg-color-1), var(--bg-color-2));
+  --font-family: 'Outfit', sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Outfit', sans-serif !important;
+  font-family: var(--font-family) !important;
   background: var(--bg-gradient) !important;
   color: #fff;
+  transition: background 0.5s ease;
 }
 
 /* Override Reveal theme */
 .reveal {
-  font-family: 'Outfit', sans-serif !important;
+  font-family: var(--font-family) !important;
 }
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  font-family: 'Outfit', sans-serif !important;
+  font-family: var(--font-family) !important;
   font-weight: 800 !important;
   text-transform: none !important;
   letter-spacing: -0.02em !important;
@@ -115,9 +119,137 @@ body {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.glass-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+/* Dashboard Drawer */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100vh;
+  background: rgba(44, 44, 84, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 25px rgba(0,0,0,0.5);
+  z-index: 2000;
+  transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  color: #f7f1e3;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: var(--primary-color);
+}
+
+.drawer-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.config-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.config-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d1ccc0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.drawer-content select {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f7f1e3;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  outline: none;
+}
+
+.drawer-content select option {
+  background: #2c2c54;
+  color: #f7f1e3;
+}
+
+.color-picker-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.color-picker-group input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: none;
+}
+
+.color-picker-group input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.color-picker-group input[type="color"]::-webkit-color-swatch {
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+}
+
+.btn-danger {
+  background: rgba(255, 50, 50, 0.2);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 50, 50, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.btn-danger:hover {
+  background: rgba(255, 50, 50, 0.4);
 }
 

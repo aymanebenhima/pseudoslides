@@ -20,7 +20,11 @@ const deck = new Reveal({
   maxScale: 1
 });
 
-deck.initialize();
+import { initConfig } from './config.js';
+
+deck.initialize().then(() => {
+  initConfig(deck);
+});
 
 // Logique du bouton Plein Écran (Native Fullscreen)
 const fullscreenBtn = document.getElementById('fullscreen-btn');

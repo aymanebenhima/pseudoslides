@@ -13,12 +13,12 @@ const deck = new Reveal({
   progress: true,
   center: true,
   
-  // Rendre les slides 100% fluides (prend tout l'écran)
-  width: '100%',
-  height: '100%',
-  margin: 0,
-  minScale: 1,
-  maxScale: 1
+  // Ratio 16:9 standard pour une parfaite adaptation
+  width: 1280,
+  height: 720,
+  margin: 0.04,
+  minScale: 0.2,
+  maxScale: 2.0
 });
 
 import { initConfig } from './config.js';
@@ -27,12 +27,44 @@ deck.initialize().then(() => {
   initConfig(deck);
 });
 
+// Navigation Rapide
+const homeBtn = document.getElementById('home-btn');
+if (homeBtn) {
+  homeBtn.addEventListener('click', () => {
+    deck.slide(0, 0); // Slide 0 (Accueil)
+  });
+}
+
+const planBtn = document.getElementById('plan-btn');
+const planDrawer = document.getElementById('plan-drawer');
+const closePlanBtn = document.getElementById('close-plan-btn');
+
+if (planBtn && planDrawer && closePlanBtn) {
+  planBtn.addEventListener('click', () => {
+    planDrawer.classList.add('open');
+  });
+
+  closePlanBtn.addEventListener('click', () => {
+    planDrawer.classList.remove('open');
+  });
+
+  // Liens du plan
+  document.querySelectorAll('.plan-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const h = parseInt(e.target.dataset.slideh, 10);
+      const v = parseInt(e.target.dataset.slidev, 10);
+      deck.slide(h, v);
+      planDrawer.classList.remove('open');
+    });
+  });
+}
+
 // Logique du bouton Plein Écran (Native Fullscreen)
 const fullscreenBtn = document.getElementById('fullscreen-btn');
 fullscreenBtn.addEventListener('click', () => {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen().catch((err) => {
-      console.error(`Erreur lors du passage en plein écran: ${err.message}`);
+      console.error(`Erreur: ${err.message}`);
     });
   } else {
     document.exitFullscreen();

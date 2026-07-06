@@ -91,7 +91,7 @@
             <h2>Le Pseudo-code</h2>
           </section>
 
-          <!-- Slide 5 -->
+          <!-- Slide: Définition globale -->
           <section>
             <h2>Qu'est-ce que le pseudo-code ?</h2>
             <div class="glass-container">
@@ -101,187 +101,298 @@
                 <li class="fragment">✅ Sert uniquement à représenter une logique.</li>
               </ul>
             </div>
-            <aside class="notes">
-              Discours : Le pseudo-code, c'est comme une recette de cuisine. Pas de syntaxe compliquée, juste du bon sens pour dire à l'ordinateur quoi faire.
-            </aside>
           </section>
 
-          <!-- Slide 6 -->
+          <!-- Slide: 2 types d'exercices -->
           <section>
             <h2>Les 2 types d'exercices</h2>
-            <div style="display:flex; gap: 20px; justify-content:center; font-size:1.2rem;">
+            <div style="display:flex; gap: 20px; justify-content:center; font-size:1.1rem; text-align:left;">
               <div class="glass-container fragment" style="flex:1;">
                 <h4 style="color:var(--secondary-color)">1. Trouver le résultat attendu</h4>
-                <p>Déterminez la valeur finale affichée (Expected Output).</p>
-                <pre><code class="language-javascript">A ← 5; B ← 2;
+                <p>Déterminez la valeur finale affichée.</p>
+                <pre><code class="language-javascript">A &larr; 5; B &larr; 2;
 Afficher A+B</code></pre>
-                <p class="fragment">Résultat : <b>7</b></p>
+                <p class="fragment" style="margin-top:10px;">Résultat attendu : <b>7</b></p>
               </div>
               <div class="glass-container fragment" style="flex:1;">
                 <h4 style="color:var(--secondary-color)">2. Code manquant</h4>
                 <p>Complétez l'instruction manquante.</p>
-                <pre><code class="language-javascript">Si A > 5 Alors
+                <pre><code class="language-javascript">Si A &gt; 5 Alors
   [ ??? ]</code></pre>
-                <p class="fragment">Résultat : <b>Afficher "Bravo"</b></p>
+                <p class="fragment" style="margin-top:10px;">Résultat attendu : <b>Afficher "Bravo"</b></p>
               </div>
             </div>
-            <aside class="notes">
-              Discours : Vous aurez principalement deux missions : soit jouer à l'ordinateur en devinant le résultat final, soit corriger/compléter le code à trous.
-            </aside>
           </section>
 
-          <!-- Slide 7 -->
+          <!-- Slide: Notions rencontrées -->
           <section>
-            <h2>Notions rencontrées</h2>
-            <ul class="feature-list" style="display:inline-block; text-align:left;">
-              <li class="fragment">📦 Variables</li>
-              <li class="fragment">📥 Entrée / Sortie</li>
-              <li class="fragment">🧮 Opérations mathématiques</li>
-              <li class="fragment">🔀 Conditions</li>
-              <li class="fragment">🔁 Boucles</li>
-            </ul>
-            <p class="fragment" style="color:var(--secondary-color); font-size:1.4rem; font-weight:bold; margin-top: 30px;">
-              Il n'est pas nécessaire de tout maîtriser avant de commencer !
-            </p>
-            <aside class="notes">
-              Discours : Ne paniquez pas face à ces termes. Vous allez apprendre pendant le test.
-            </aside>
-          </section>
-
-          <!-- Slide 8 -->
-          <section>
-            <h2>📦 Les Variables</h2>
+            <h2>Notions que vous rencontrerez</h2>
             <div class="glass-container">
-              <p>Une <b>boîte</b> avec un nom, qui contient une valeur.</p>
-              <pre class="fragment"><code class="javascript">Age ← 25</code></pre>
-              <pre class="fragment"><code class="javascript">Prenom ← "Ali"</code></pre>
-              <pre class="fragment"><code class="javascript">Age ← Age + 1
-// La boîte Age contient maintenant 26</code></pre>
-            </div>
-            <aside class="notes">
-              Expliquer l'analogie de la boîte. La valeur à l'intérieur peut changer, d'où le nom "variable".
-            </aside>
-          </section>
-
-          <!-- Slide 9 -->
-          <section>
-            <h2>📥 Lire / Écrire</h2>
-            <div style="display:flex; gap: 20px; align-items:center; justify-content:center; margin-top:40px;">
-              <div class="glass-container fragment" style="flex:1;">
-                <h4 class="gradient-text">LIRE</h4>
-                <p>On demande une donnée en entrée</p>
-                <span style="font-size:3rem;">⌨️</span>
-              </div>
-              <span class="fragment" style="font-size:3rem;">➡️</span>
-              <div class="glass-container fragment" style="flex:1;">
-                <h4 class="gradient-text">ÉCRIRE / AFFICHER</h4>
-                <p>On montre le résultat final</p>
-                <span style="font-size:3rem;">🖥️</span>
-              </div>
+              <ul class="feature-list" style="display:inline-block; text-align:left;">
+                <li class="fragment">📦 Variables</li>
+                <li class="fragment">📥 Entrée / Sortie</li>
+                <li class="fragment">🧮 Opérations mathématiques</li>
+                <li class="fragment">🔀 Conditions & Comparaisons</li>
+                <li class="fragment">🔁 Boucles</li>
+              </ul>
+              <p class="fragment" style="color:#ffda79; font-size:1.2rem; font-weight:bold; margin-top: 30px;">
+                Il n'est pas nécessaire de tout maîtriser avant de commencer !
+              </p>
             </div>
           </section>
 
-          <!-- Slide 10 -->
+          <!-- Slide: Variable -->
           <section>
-            <h2>🧮 Opérations Mathématiques</h2>
-            <div class="glass-container" style="font-size:1.8rem; display:flex; justify-content:space-around; align-items:center;">
-              <div class="fragment"><b>+</b><br><span style="font-size:1rem; color:#ccc;">Plus</span></div>
-              <div class="fragment"><b>-</b><br><span style="font-size:1rem; color:#ccc;">Moins</span></div>
-              <div class="fragment"><b>*</b><br><span style="font-size:1rem; color:#ccc;">Fois</span></div>
-              <div class="fragment"><b>/</b><br><span style="font-size:1rem; color:#ccc;">Divisé</span></div>
-              <div class="fragment" style="color:var(--secondary-color)"><b>MOD</b><br><span style="font-size:1rem; color:#fff;">Modulo</span></div>
+            <h2>📦 Variable</h2>
+            <div class="glass-container" style="text-align: left; display:flex; gap:20px; align-items:center;">
+              <div style="flex:1;">
+                <p>Une boîte nommée qui stocke une valeur en mémoire.</p>
+                <div style="display:flex; justify-content:space-around; margin:30px 0; font-size:1.5rem;">
+                  <div class="fragment"><code>age &rarr; <span style="color:var(--secondary-color)">25</span></code></div>
+                  <div class="fragment"><code>score &rarr; <span style="color:var(--secondary-color)">100</span></code></div>
+                </div>
+                <p class="fragment" style="color:var(--secondary-color); font-weight:bold; border-top: 1px solid rgba(255,255,255,0.2); padding-top:20px;">
+                  💡 Règle : garde sa DERNIÈRE valeur.
+                </p>
+              </div>
+              <div style="flex:1; text-align:center;" class="fragment">
+                <img src="/concept_variables.png" alt="Concept de Variable" style="border-radius:12px; max-width:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+              </div>
             </div>
-            <p class="fragment" style="margin-top:30px; font-size:1.3rem;">
-              Le <b>Modulo</b> est le reste d'une division.<br>
-              <span style="color:var(--secondary-color);">Exemple : 5 MOD 2 = 1 (car 5 = 2*2 + 1)</span>
+          </section>
+
+          <!-- Slide: Affectation -->
+          <section>
+            <h2>⬅️ Affectation</h2>
+            <div class="glass-container" style="text-align: left; font-size:1.2rem;">
+              <p>Syntaxe : <code>variable &larr; valeur</code></p>
+              <p><i>"Mettre la valeur de DROITE dans la boîte de GAUCHE"</i></p>
+              <div style="border-top: 1px solid rgba(255,255,255,0.2); margin: 15px 0;"></div>
+              <h4>Trace pas-à-pas :</h4>
+              <ol style="margin-left:20px; line-height: 1.8;">
+                <li class="fragment"><code>x &larr; 5</code> <span style="color:var(--secondary-color); float:right;">&rarr; x = 5</span></li>
+                <li class="fragment"><code>x &larr; x + 3</code> <span style="color:var(--secondary-color); float:right;">&rarr; x = 8</span></li>
+                <li class="fragment"><code>y &larr; x * 2</code> <span style="color:var(--secondary-color); float:right;">&rarr; x = 8, y = 16</span></li>
+              </ol>
+              <p class="fragment" style="color:#ffda79; font-weight:bold; margin-top:20px;">
+                ⚠️ Le &larr; n'est PAS une équation mathématique !<br>
+                <code>x &larr; x + 1</code> signifie : x prend sa valeur actuelle + 1.
+              </p>
+            </div>
+          </section>
+
+          <!-- Slide: Afficher -->
+          <section>
+            <h2>🖥️ Afficher</h2>
+            <div style="display:flex; gap: 20px; font-size: 1.1rem; text-align:left;">
+              <div class="glass-container fragment" style="flex:1;">
+                <h4>Texte</h4>
+                <pre><code class="javascript">afficher "Bonjour"</code></pre>
+                <p style="color:var(--secondary-color); margin-top:10px;">&rarr; Bonjour</p>
+              </div>
+              <div class="glass-container fragment" style="flex:1;">
+                <h4>Variable</h4>
+                <pre><code class="javascript">x &larr; 42
+afficher x</code></pre>
+                <p style="color:var(--secondary-color); margin-top:10px;">&rarr; 42</p>
+              </div>
+              <div class="glass-container fragment" style="flex:1;">
+                <h4>Ordre</h4>
+                <pre><code class="javascript">afficher 1
+afficher 2</code></pre>
+                <p style="color:var(--secondary-color); margin-top:10px;">&rarr; 1<br>&rarr; 2</p>
+              </div>
+            </div>
+            <p class="fragment" style="margin-top:20px; color:var(--secondary-color); font-weight:bold;">
+              💡 Règle d'or : chaque instruction afficher = une nouvelle ligne. L'ordre du code = ordre d'affichage.
             </p>
-            <aside class="notes">
-              Insistez sur le Modulo, c'est l'opération la moins connue des débutants.
-            </aside>
           </section>
 
-          <!-- Slide 11 -->
+          <!-- Slide: Concaténation -->
           <section>
-            <h2>🔀 Les Conditions</h2>
-            <div class="glass-container">
-              <pre><code class="javascript">SI (Il pleut) ALORS
-   Prendre un parapluie
-SINON
-   Mettre des lunettes de soleil</code></pre>
+            <h2>🔗 Concaténation</h2>
+            <div class="glass-container" style="text-align: left;">
+              <p>Coller des textes et des variables ensemble.</p>
+              <pre class="fragment" style="text-align:center;"><code class="javascript">"Bonjour" + " " + "Ali" &rarr; "Bonjour Ali"</code></pre>
+              <div style="display:flex; gap:20px; font-size:1.1rem; margin-top:20px;">
+                <div class="fragment" style="flex:1; border: 1px solid rgba(255,255,255,0.2); padding: 15px; border-radius:8px;">
+                  <h4 style="margin-bottom:10px;">Texte + Variable</h4>
+                  <pre><code class="javascript">score &larr; 95
+msg &larr; "Score : " + score
+afficher msg</code></pre>
+                  <span style="color:var(--secondary-color)">&rarr; Score : 95</span>
+                </div>
+                <div class="fragment" style="flex:1; border: 1px solid rgba(255,255,255,0.2); padding: 15px; border-radius:8px;">
+                  <h4 style="margin-bottom:10px;">Construire pas-à-pas</h4>
+                  <pre><code class="javascript">code &larr; "ID"
+code &larr; code + "-"
+code &larr; code + "42"
+afficher code</code></pre>
+                  <span style="color:var(--secondary-color)">&rarr; ID-42</span>
+                </div>
+              </div>
+              <p class="fragment" style="color:#ffda79; font-weight:bold; margin-top:20px; font-size:1.1rem;">
+                ⚠️ Un espace doit être explicitement ajouté : <code>" "</code><br>
+                Sans espace: <code>"Ali" + "Ben" = "AliBen"</code>
+              </p>
             </div>
-            <p class="fragment" style="font-size: 1.5rem; margin-top:20px;">Un cheminement logique basé sur une décision.</p>
-            <aside class="notes">
-              C'est un arbre de décision simple de la vie de tous les jours. L'ordinateur fait exactement pareil.
-            </aside>
           </section>
 
-          <!-- Slide 12 -->
+          <!-- Slide: MOD -->
+          <section>
+            <h2>➗ MOD — Reste de Division</h2>
+            <div class="glass-container">
+              <p>Analogie : 17 pizzas pour 5 personnes.</p>
+              <div style="display:flex; justify-content:center; gap:30px; font-size:1.5rem; margin:20px 0;">
+                <div class="fragment" style="background:rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><code>17 DIV 5 = 3</code><br><span style="font-size:1rem; color:#ccc">Quotient (chacun a 3)</span></div>
+                <div class="fragment" style="background:rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><code>17 MOD 5 = 2</code><br><span style="font-size:1rem; color:var(--secondary-color)">Reste (il reste 2 pizzas)</span></div>
+              </div>
+              <div style="display:flex; gap:20px; font-size:1.1rem; margin-top:20px; text-align:left;">
+                <div class="fragment" style="flex:1;"><b>Parité :</b><br><code>n MOD 2 = 0</code><br><span style="color:var(--secondary-color)">&rarr; pair</span></div>
+                <div class="fragment" style="flex:1;"><b>Dernier chiffre :</b><br><code>n MOD 10</code><br><span style="color:var(--secondary-color)">&rarr; dernier chiffre</span></div>
+                <div class="fragment" style="flex:1;"><b>Cyclique :</b><br><code>i MOD 3</code><br><span style="color:var(--secondary-color)">&rarr; 0, 1, 2, 0, 1...</span></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide: Conditions -->
+          <section>
+            <h2>🔀 SI / SINON — Conditions</h2>
+            <div class="glass-container" style="display:flex; gap:20px; align-items:center;">
+              <div style="flex:1; text-align:left;">
+                <pre><code class="javascript">si condition alors
+   // bloc si vrai
+sinon
+   // bloc si faux
+fin si</code></pre>
+                <p style="margin-top:15px; font-size:1.2rem; color:var(--secondary-color);">Un cheminement logique basé sur une décision.</p>
+                <p class="fragment" style="color:#ffda79; margin-top:20px;">💡 Indentation = niveau d'imbrication.</p>
+              </div>
+              <div style="flex:1; text-align:center;" class="fragment">
+                <img src="/concept_conditions.png" alt="Concept de Conditions" style="border-radius:12px; max-width:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide: Comparaisons -->
           <section>
             <h2>⚖️ Les Comparaisons</h2>
             <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 1.5rem;" class="glass-container">
-              <div class="fragment"><b>></b> <span style="color:#aaa;">Plus grand</span></div>
-              <div class="fragment"><b><</b> <span style="color:#aaa;">Plus petit</span></div>
-              <div class="fragment"><b>>=</b> <span style="color:#aaa;">Plus grand ou égal</span></div>
-              <div class="fragment"><b><=</b> <span style="color:#aaa;">Plus petit ou égal</span></div>
-              <div class="fragment"><b>==</b> <span style="color:#aaa;">Égal à</span></div>
-              <div class="fragment"><b>!=</b> <span style="color:#aaa;">Différent de</span></div>
+              <div class="fragment" style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px;"><b>&gt;</b> <span style="color:#aaa;">Plus grand</span></div>
+              <div class="fragment" style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px;"><b>&lt;</b> <span style="color:#aaa;">Plus petit</span></div>
+              <div class="fragment" style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px;"><b>&gt;=</b> <span style="color:#aaa;">Plus grand ou égal</span></div>
+              <div class="fragment" style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px;"><b>&lt;=</b> <span style="color:#aaa;">Plus petit ou égal</span></div>
+              <div class="fragment" style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px;"><b>==</b> <span style="color:#aaa;">Égal à</span></div>
+              <div class="fragment" style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px;"><b>!=</b> <span style="color:#aaa;">Différent de</span></div>
             </div>
           </section>
 
-          <!-- Slide 13 -->
+          <!-- Slide: Opérateurs Logiques -->
           <section>
             <h2>🔗 Opérateurs Logiques</h2>
             <div style="display:flex; gap:20px; justify-content:center; align-items:stretch;">
               <div class="glass-container fragment" style="flex:1;">
                 <h4 class="gradient-text">ET (AND)</h4>
-                <p style="font-size:1.1rem"><b>Toutes</b> les conditions doivent être vraies.</p>
+                <p style="font-size:1.1rem; margin-top:10px;"><b>Toutes</b> les conditions doivent être vraies.</p>
               </div>
               <div class="glass-container fragment" style="flex:1;">
                 <h4 class="gradient-text">OU (OR)</h4>
-                <p style="font-size:1.1rem"><b>Au moins une</b> condition doit être vraie.</p>
+                <p style="font-size:1.1rem; margin-top:10px;"><b>Au moins une</b> condition doit être vraie.</p>
               </div>
               <div class="glass-container fragment" style="flex:1;">
                 <h4 class="gradient-text">NON (NOT)</h4>
-                <p style="font-size:1.1rem"><b>Inverse</b> la condition (Vrai devient Faux).</p>
+                <p style="font-size:1.1rem; margin-top:10px;"><b>Inverse</b> la condition (Vrai devient Faux).</p>
               </div>
             </div>
           </section>
 
-          <!-- Slide 14 -->
+          <!-- Slide: Boucles -->
           <section>
             <h2>🔁 Les Boucles</h2>
-            <div class="glass-container">
-              <h4 class="gradient-text">POUR / TANT QUE</h4>
-              <p>Répéter une action plusieurs fois de manière automatique.</p>
-              <div style="display:flex; gap:20px; font-size:0.9em;">
-                <pre class="fragment" style="flex:1;"><code class="javascript">TANT QUE (soif == VRAI)
-   Boire de l'eau
-FIN TANT QUE</code></pre>
-                <pre class="fragment" style="flex:1;"><code class="javascript">POUR i DE 1 À 3
-   Boire de l'eau
-FIN POUR</code></pre>
+            <div class="glass-container" style="display:flex; gap:20px; align-items:center; text-align:left; font-size:1.1rem;">
+              <div style="flex:1;">
+                <h4 class="gradient-text">POUR / TANT QUE</h4>
+                <p style="margin-bottom:20px;">Répéter une action plusieurs fois de manière automatique.</p>
+                <pre><code class="javascript">pour i de 1 a 3 faire
+   afficher i
+fin pour</code></pre>
+                <div style="margin-top:15px; border-left: 3px solid var(--secondary-color); padding-left:10px;">
+                  <span class="fragment">i=1 &rarr; 1</span><br>
+                  <span class="fragment">i=2 &rarr; 2</span><br>
+                  <span class="fragment">i=3 &rarr; 3</span>
+                </div>
+              </div>
+              <div style="flex:1; text-align:center;" class="fragment">
+                <img src="/concept_loops.png" alt="Concept de Boucles" style="border-radius:12px; max-width:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
               </div>
             </div>
-            <aside class="notes">
-              Animation mentale : on vérifie la condition, on execute l'action, et on boucle tant que la condition reste vraie.
-            </aside>
           </section>
 
-          <!-- Slide 15 -->
+          <!-- Slide: Boucles Imbriquées -->
           <section>
-            <h2>📈 Progression de difficulté</h2>
-            <div style="font-size: 1.3rem; text-align:left; display:inline-block;" class="glass-container">
-              <div class="fragment">1. Variables <span style="color:#33d9b2;">🟩</span></div>
-              <div class="fragment">2. Conditions simples <span style="color:#33d9b2;">🟩</span></div>
-              <div class="fragment">3. Conditions multiples <span style="color:#ffda79;">🟨</span></div>
-              <div class="fragment">4. Boucles <span style="color:#ffda79;">🟨</span></div>
-              <div class="fragment">5. Boucles + Conditions <span style="color:#ff793f;">🟧</span></div>
-              <div class="fragment">6. Conditions imbriquées <span style="color:#ff793f;">🟧</span></div>
-              <div class="fragment">7. Boucles imbriquées <span style="color:#ff5252;">🟥</span></div>
-              <div class="fragment">8. Exercices complets <span style="color:#ff5252;">🟥</span></div>
+            <h2>🔄 Boucles Imbriquées</h2>
+            <div class="glass-container" style="display:flex; gap:20px; text-align:left; font-size:1rem;">
+              <div style="flex:1;" class="fragment">
+                <pre><code class="javascript">pour i de 1 a 3 faire
+   pour j de 1 a 2 faire
+      afficher i + "-" + j
+   fin pour
+fin pour</code></pre>
+                <div style="margin-top:20px; background: rgba(0,0,0,0.2); padding:15px; border-radius:8px;">
+                  <b>Grille de résultats :</b><br>
+                  <span class="fragment" style="color:var(--secondary-color)">i=1 &rarr; 1-1, 1-2</span><br>
+                  <span class="fragment" style="color:var(--secondary-color)">i=2 &rarr; 2-1, 2-2</span><br>
+                  <span class="fragment" style="color:var(--secondary-color)">i=3 &rarr; 3-1, 3-2</span>
+                </div>
+              </div>
+              <div style="flex:1;" class="fragment">
+                <h4 style="margin-bottom:15px;">Comment lire :</h4>
+                <ol style="margin-left:15px; line-height:1.8em;">
+                  <li>Boucle <b>EXTERNE</b> : <code>i</code> démarre à 1.</li>
+                  <li>Boucle <b>INTERNE</b> : <code>j</code> parcourt 1 puis 2.</li>
+                  <li>Pour chaque <code>i</code>, <code>j</code> repart TOUJOURS de 1.</li>
+                  <li>La boucle interne finit &rarr; <code>i</code> avance.</li>
+                </ol>
+                <p style="margin-top:20px; color:var(--secondary-color); font-weight:bold; padding: 10px; border: 1px solid var(--secondary-color); border-radius: 8px;">
+                  Total tours = tours_ext &times; tours_int<br>
+                  = 3 &times; 2 = 6 affichages.
+                </p>
+              </div>
             </div>
-            <p class="fragment" style="color:var(--secondary-color); font-weight:bold; margin-top:20px;">Prenez votre temps, la difficulté monte progressivement.</p>
           </section>
+
+          <!-- Slide: Exemple Complet -->
+          <section>
+            <h2>🧩 Un exemple complet</h2>
+            <div class="glass-container" style="display:flex; gap:20px; text-align:left;">
+              <div style="flex:1;">
+                <p style="font-size: 0.9em; margin-bottom:10px;">Combinaison : Variable + Boucle + Condition + MOD + Concaténation</p>
+                <pre style="font-size:0.85em;"><code class="javascript">score &larr; 0
+pour i de 1 a 5 faire
+   si i MOD 2 == 0 alors
+      score &larr; score + 10
+   sinon
+      score &larr; score + 5
+   fin si
+fin pour
+afficher "Score final : " + score</code></pre>
+              </div>
+              <div style="flex:1; border-left: 1px solid rgba(255,255,255,0.2); padding-left:20px;" class="fragment">
+                <h4>Que fait ce code ?</h4>
+                <ul class="feature-list" style="font-size:0.95em; line-height:1.6;">
+                  <li class="fragment">Il boucle 5 fois (i=1, 2, 3, 4, 5).</li>
+                  <li class="fragment">Si <code>i</code> est pair (MOD 2 == 0), +10 points.</li>
+                  <li class="fragment">Sinon (impair), +5 points.</li>
+                  <li class="fragment">Affichage texte + variable à la fin.</li>
+                </ul>
+                <div class="fragment" style="margin-top:20px; background:rgba(255,255,255,0.1); padding:15px; border-radius:8px;">
+                  <i>(i=1 &rarr; +5, i=2 &rarr; +10, i=3 &rarr; +5, i=4 &rarr; +10, i=5 &rarr; +5)</i><br>
+                  <p style="color:var(--secondary-color); font-weight:bold; font-size:1.1rem; margin-top:10px;">Résultat final : Score final : 35</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </section>
 
         <!-- SECTION 2: Énigmes -->
@@ -294,14 +405,19 @@ FIN POUR</code></pre>
           <!-- Slide 16 -->
           <section>
             <h2>Pourquoi des énigmes ?</h2>
-            <p style="margin-bottom: 30px;">Elles nous permettent d'évaluer :</p>
-            <div class="glass-container">
-              <ul class="feature-list" style="display:inline-block; text-align:left;">
-                <li class="fragment">🔍 Votre sens de l'observation</li>
-                <li class="fragment">🧠 Votre logique pure</li>
-                <li class="fragment">📊 Votre capacité d'analyse</li>
-                <li class="fragment">🧩 Votre reconnaissance de motifs (patterns)</li>
-              </ul>
+            <div class="glass-container" style="display:flex; gap:20px; align-items:center;">
+              <div style="flex:1; text-align:left;">
+                <p style="margin-bottom: 20px;">Elles nous permettent d'évaluer :</p>
+                <ul class="feature-list" style="display:inline-block;">
+                  <li class="fragment">🔍 Votre observation</li>
+                  <li class="fragment">🧠 Votre logique pure</li>
+                  <li class="fragment">📊 Votre capacité d'analyse</li>
+                  <li class="fragment">🧩 Reconnaissance de motifs</li>
+                </ul>
+              </div>
+              <div style="flex:1;" class="fragment">
+                <img src="/concept_enigmas.png" alt="Concept d'énigmes" style="border-radius:12px; max-width:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+              </div>
             </div>
           </section>
 
@@ -340,17 +456,31 @@ FIN POUR</code></pre>
           <!-- Slide 19 -->
           <section>
             <h2>🔳 Matrices de Raven</h2>
-            <div class="glass-container" style="text-align:left;">
-              <p>Cherchez la logique cachée dans les figures :</p>
-              <ul class="feature-list">
-                <li class="fragment">🔹 Formes et Couleurs</li>
-                <li class="fragment">🔄 Rotations</li>
-                <li class="fragment">🪞 Symétries</li>
-                <li class="fragment">➕ Répétitions / Additions de formes</li>
-              </ul>
+            <div class="glass-container" style="display:flex; gap:20px; align-items:center;">
+              <div style="flex:1; text-align:left;">
+                <p>Cherchez la logique cachée dans les figures :</p>
+                <ul class="feature-list" style="font-size:0.95em;">
+                  <li class="fragment">🔹 Formes et Couleurs</li>
+                  <li class="fragment">🔄 Rotations</li>
+                  <li class="fragment">🪞 Symétries</li>
+                  <li class="fragment">➕ Répétitions / Additions</li>
+                </ul>
+              </div>
+              <div style="flex:1; border-left:1px solid rgba(255,255,255,0.2); padding-left:20px;" class="fragment">
+                <h4 style="margin-bottom:15px;">Exemple simple :</h4>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; font-size:4rem; background:rgba(0,0,0,0.2); padding:30px; border-radius:8px;">
+                  <div style="text-align:center;">🔺</div>
+                  <div style="text-align:center;">🔻</div>
+                  <div style="text-align:center;">🔼</div>
+                  <div style="text-align:center;">❓</div>
+                </div>
+                <p class="fragment" style="color:var(--secondary-color); font-weight:bold; margin-top:20px; font-size:1.2rem;">
+                  Réponse : 🔽 (Symétrie horizontale)
+                </p>
+              </div>
             </div>
             <aside class="notes">
-              Expliquez que c'est un puzzle visuel. Il faut trouver la règle qui lie les images entre elles, que ce soit de gauche à droite ou de haut en bas.
+              Expliquez que c'est un puzzle visuel. Il faut trouver la règle qui lie les images entre elles, par exemple ici une symétrie verticale. L'élément pointant en haut devient un élément pointant en bas.
             </aside>
           </section>
 
@@ -461,22 +591,40 @@ FIN POUR</code></pre>
       </div>
     </div>
     
-    <!-- Bouton Plein Écran -->
-    <button id="fullscreen-btn" class="glass-btn" style="bottom: 25px;">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
-      </svg>
-      Plein Écran
-    </button>
+    <!-- Boutons de Navigation (Bas Gauche) -->
+    <div style="position:fixed; bottom:25px; left:25px; z-index:1000; display:flex; gap:10px;">
+      <button id="home-btn" class="glass-btn" style="position:static; margin:0;" title="Accueil">🏠</button>
+      <button id="plan-btn" class="glass-btn" style="position:static; margin:0;" title="Plan & Sommaire">📑</button>
+      <button id="fullscreen-btn" class="glass-btn" style="position:static; margin:0;" title="Plein Écran">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+      </button>
+      <button id="settings-btn" class="glass-btn" style="position:static; margin:0;" title="Configuration">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
+    </div>
 
-    <!-- Tableau de bord de configuration -->
-    <button id="settings-btn" class="glass-btn" style="bottom: 80px; left: 25px;">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="3"></circle>
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-      </svg>
-      Configuration
-    </button>
+    <!-- Drawer pour le Plan de navigation -->
+    <div id="plan-drawer" class="drawer" style="left:-400px; right:auto; border-right:1px solid rgba(255,255,255,0.1); border-left:none;">
+      <div class="drawer-header">
+        <h3>📑 Plan de présentation</h3>
+        <button id="close-plan-btn" class="close-btn">&times;</button>
+      </div>
+      <div class="drawer-content" style="gap:15px;">
+        <button class="plan-link btn-danger" style="background:rgba(255,255,255,0.1); color:white; border:none; text-align:left;" data-slideh="0" data-slidev="0">👋 Accueil</button>
+        <button class="plan-link btn-danger" style="background:rgba(255,255,255,0.1); color:white; border:none; text-align:left;" data-slideh="2" data-slidev="0">⏱️ Déroulement</button>
+        <button class="plan-link btn-danger" style="background:rgba(255,255,255,0.1); color:var(--primary-color); border:none; text-align:left;" data-slideh="4" data-slidev="0">📝 Pseudo-code (Intro)</button>
+        <button class="plan-link btn-danger" style="background:rgba(255,255,255,0.1); color:white; border:none; text-align:left;" data-slideh="4" data-slidev="4">📦 Les Variables</button>
+        <button class="plan-link btn-danger" style="background:rgba(255,255,255,0.1); color:white; border:none; text-align:left;" data-slideh="4" data-slidev="9">🔀 Les Conditions</button>
+        <button class="plan-link btn-danger" style="background:rgba(255,255,255,0.1); color:white; border:none; text-align:left;" data-slideh="4" data-slidev="12">🔁 Les Boucles</button>
+        <button class="plan-link btn-danger" style="background:rgba(255,255,255,0.1); color:var(--primary-color); border:none; text-align:left;" data-slideh="5" data-slidev="0">🧩 Les Énigmes (Intro)</button>
+        <button class="plan-link btn-danger" style="background:rgba(255,255,255,0.1); color:white; border:none; text-align:left;" data-slideh="6" data-slidev="0">✅ Conseils pour réussir</button>
+      </div>
+    </div>
 
     <div id="dashboard-drawer" class="drawer">
       <div class="drawer-header">

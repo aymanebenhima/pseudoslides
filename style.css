@@ -1,5 +1,5 @@
-@import 'reveal.js/dist/reveal.css';
-@import 'reveal.js/dist/theme/black.css';
+@import 'reveal.js/reveal.css';
+@import 'reveal.js/theme/black.css';
 @import 'reveal.js/plugin/highlight/monokai.css';
 
 :root {
@@ -90,3 +90,34 @@ body {
     transform: translateY(-10px);
   }
 }
+
+/* Bouton Plein Écran */
+.glass-btn {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+

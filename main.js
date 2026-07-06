@@ -11,6 +11,25 @@ const deck = new Reveal({
   controls: true,
   progress: true,
   center: true,
+  
+  // Rendre les slides 100% fluides (prend tout l'écran)
+  width: '100%',
+  height: '100%',
+  margin: 0,
+  minScale: 1,
+  maxScale: 1
 });
 
 deck.initialize();
+
+// Logique du bouton Plein Écran (Native Fullscreen)
+const fullscreenBtn = document.getElementById('fullscreen-btn');
+fullscreenBtn.addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch((err) => {
+      console.error(`Erreur lors du passage en plein écran: ${err.message}`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+});

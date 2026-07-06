@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pseudoslides - Plateforme de présentation animée" />
+    <title>Pseudoslides - Présentation Premium</title>
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Slide 1: Intro -->
+        <section data-auto-animate>
+          <h1 class="gradient-text">Pseudoslides</h1>
+          <p class="subtitle">L'expérience de présentation ultime</p>
+        </section>
+
+        <!-- Slide 2: Features -->
+        <section data-auto-animate>
+          <h1 class="gradient-text" style="font-size: 3em;">Pseudoslides</h1>
+          <h2>Fonctionnalités Clés</h2>
+          <div class="glass-container">
+            <ul class="feature-list">
+              <li class="fragment fade-up">✨ Design Premium et Glassmorphism</li>
+              <li class="fragment fade-up">🚀 Animations Fluides (Reveal.js)</li>
+              <li class="fragment fade-up">📱 Navigation Multi-directionnelle</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Slide 3: Vertical Navigation Demo -->
+        <section>
+          <section>
+            <h2>Navigation Verticale</h2>
+            <p>Glissez ou appuyez vers le bas pour plus de détails</p>
+            <br>
+            <span class="down-arrow">⬇️</span>
+          </section>
+          <section>
+            <h2 class="gradient-text">Des possibilités infinies</h2>
+            <div class="glass-container">
+              <p>La structure en grille permet d'organiser vos idées de façon logique.</p>
+              <p class="fragment fade-in">Ce slide est "en dessous" du précédent.</p>
+            </div>
+          </section>
+        </section>
+
+        <!-- Slide 4: Code Demo -->
+        <section>
+          <h2>Support Code & Syntaxe</h2>
+          <div class="glass-container" style="padding: 20px;">
+            <pre><code data-trim data-noescape class="language-javascript">
+import Reveal from 'reveal.js';
+import Highlight from 'reveal.js/plugin/highlight';
+
+let deck = new Reveal({
+   plugins: [ Highlight ],
+   hash: true
+});
+deck.initialize();
+            </code></pre>
+          </div>
+        </section>
+
+        <!-- Slide 5: Outro -->
+        <section>
+          <h2 class="gradient-text">Prêt à créer ?</h2>
+          <p>Utilisez les touches directionnelles pour naviguer.</p>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

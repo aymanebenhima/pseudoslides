@@ -1,9 +1,10 @@
 import './style.css';
 import Reveal from 'reveal.js';
 import Highlight from 'reveal.js/plugin/highlight';
+import Notes from 'reveal.js/plugin/notes';
 
 const deck = new Reveal({
-  plugins: [Highlight],
+  plugins: [Highlight, Notes],
   hash: true,
   transition: 'slide', // none/fade/slide/convex/concave/zoom
   backgroundTransition: 'fade',

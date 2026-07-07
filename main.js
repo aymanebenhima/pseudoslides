@@ -86,6 +86,34 @@ const traceEngine = {
     { line: 3, mem: "age = 20", out: "Majeur" },
     { line: 6, mem: "age = 20", out: "Majeur" }
   ],
+  "slide-anim-condition-imbriquee": [
+    { line: null, mem: "", out: "" },
+    { line: 1, mem: "age = 19", out: "" },
+    { line: 2, mem: "age = 19<br>motive = VRAI", out: "" },
+    { line: 3, mem: "age = 19<br>motive = VRAI<br><span style='color:var(--secondary-color);'>(19 >= 18 est VRAI)</span>", out: "" },
+    { line: 4, mem: "age = 19<br>motive = VRAI<br><span style='color:var(--secondary-color);'>(VRAI == VRAI est VRAI)</span>", out: "" },
+    { line: 5, mem: "age = 19<br>motive = VRAI", out: "Bienvenue à YouCode !" },
+    { line: 8, mem: "age = 19<br>motive = VRAI", out: "Bienvenue à YouCode !" },
+    { line: 11, mem: "age = 19<br>motive = VRAI", out: "Bienvenue à YouCode !" }
+  ],
+  "slide-anim-tant-que": [
+    { line: null, mem: "", out: "" },
+    { line: 1, mem: "compteur = 1", out: "" },
+    { line: 2, mem: "compteur = 1<br><span style='color:var(--secondary-color);'>(1 <= 3 est VRAI)</span>", out: "" },
+    { line: 3, mem: "compteur = 1", out: "Tour 1" },
+    { line: 4, mem: "compteur = 2", out: "Tour 1" },
+    { line: 5, mem: "compteur = 2", out: "Tour 1" },
+    { line: 2, mem: "compteur = 2<br><span style='color:var(--secondary-color);'>(2 <= 3 est VRAI)</span>", out: "Tour 1" },
+    { line: 3, mem: "compteur = 2", out: "Tour 1<br>Tour 2" },
+    { line: 4, mem: "compteur = 3", out: "Tour 1<br>Tour 2" },
+    { line: 5, mem: "compteur = 3", out: "Tour 1<br>Tour 2" },
+    { line: 2, mem: "compteur = 3<br><span style='color:var(--secondary-color);'>(3 <= 3 est VRAI)</span>", out: "Tour 1<br>Tour 2" },
+    { line: 3, mem: "compteur = 3", out: "Tour 1<br>Tour 2<br>Tour 3" },
+    { line: 4, mem: "compteur = 4", out: "Tour 1<br>Tour 2<br>Tour 3" },
+    { line: 5, mem: "compteur = 4", out: "Tour 1<br>Tour 2<br>Tour 3" },
+    { line: 2, mem: "compteur = 4<br><span style='color:var(--secondary-color);'>(4 <= 3 est FAUX)</span>", out: "Tour 1<br>Tour 2<br>Tour 3" },
+    { line: null, mem: "compteur = 4", out: "Tour 1<br>Tour 2<br>Tour 3" }
+  ],
   "slide-anim-boucle-imbriquee": [
     { line: null, mem: "", out: "" },
     { line: 1, mem: "i = 1", out: "" },
@@ -103,6 +131,27 @@ const traceEngine = {
     { line: 2, mem: "i = 2, j = 2", out: "1-1<br>1-2<br>2-1" },
     { line: 3, mem: "i = 2, j = 2", out: "1-1<br>1-2<br>2-1<br>2-2" },
     { line: 6, mem: "Terminé !", out: "1-1<br>1-2<br>2-1<br>2-2" }
+  ],
+  "slide-anim-combiner-si-pour": [
+    { line: null, mem: "", out: "" },
+    { line: 1, mem: "i = 1", out: "" },
+    { line: 2, mem: "i = 1<br><span style='color:var(--secondary-color);'>(1 MOD 2 == 0 est FAUX)</span>", out: "" },
+    { line: 4, mem: "i = 1", out: "" },
+    { line: 1, mem: "i = 2", out: "" },
+    { line: 2, mem: "i = 2<br><span style='color:var(--secondary-color);'>(2 MOD 2 == 0 est VRAI)</span>", out: "" },
+    { line: 3, mem: "i = 2", out: "2 Pair" },
+    { line: 4, mem: "i = 2", out: "2 Pair" },
+    { line: 1, mem: "i = 3", out: "2 Pair" },
+    { line: 2, mem: "i = 3<br><span style='color:var(--secondary-color);'>(3 MOD 2 == 0 est FAUX)</span>", out: "2 Pair" },
+    { line: 4, mem: "i = 3", out: "2 Pair" },
+    { line: 1, mem: "i = 4", out: "2 Pair" },
+    { line: 2, mem: "i = 4<br><span style='color:var(--secondary-color);'>(4 MOD 2 == 0 est VRAI)</span>", out: "2 Pair" },
+    { line: 3, mem: "i = 4", out: "2 Pair<br>4 Pair" },
+    { line: 4, mem: "i = 4", out: "2 Pair<br>4 Pair" },
+    { line: 1, mem: "i = 5", out: "2 Pair<br>4 Pair" },
+    { line: 2, mem: "i = 5<br><span style='color:var(--secondary-color);'>(5 MOD 2 == 0 est FAUX)</span>", out: "2 Pair<br>4 Pair" },
+    { line: 4, mem: "i = 5", out: "2 Pair<br>4 Pair" },
+    { line: 5, mem: "Terminé !", out: "2 Pair<br>4 Pair" }
   ],
   "slide-anim-exemple-complet": [
     { line: null, mem: "", out: "" },

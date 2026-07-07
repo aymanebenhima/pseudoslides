@@ -13,9 +13,9 @@ const deck = new Reveal({
   progress: true,
   center: true,
   
-  // Ratio 16:9 standard pour une parfaite adaptation
-  width: 1280,
-  height: 720,
+  // Ratio 16:9 standard pour une parfaite adaptation (Full HD pour plus d'espace)
+  width: 1920,
+  height: 1080,
   margin: 0.04,
   minScale: 0.2,
   maxScale: 2.0

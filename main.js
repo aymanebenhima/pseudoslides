@@ -82,7 +82,7 @@ const traceEngine = {
   "slide-anim-condition": [
     { line: null, mem: "", out: "" },
     { line: 1, mem: "age = 20", out: "" },
-    { line: 2, mem: "age = 20 <br><span style='color:var(--secondary-color);font-size:1rem;'>(20 >= 18 est VRAI)</span>", out: "" },
+    { line: 2, mem: "age = 20 <br><span style='color:var(--secondary-color);'>(20 >= 18 est VRAI)</span>", out: "" },
     { line: 3, mem: "age = 20", out: "Majeur" },
     { line: 6, mem: "age = 20", out: "Majeur" }
   ],
@@ -95,7 +95,7 @@ const traceEngine = {
     { line: 2, mem: "i = 1, j = 2", out: "1-1" },
     { line: 3, mem: "i = 1, j = 2", out: "1-1<br>1-2" },
     { line: 4, mem: "i = 1, j = 2", out: "1-1<br>1-2" },
-    { line: 5, mem: "i = 1 <span style='color:var(--secondary-color);font-size:1rem;'>(Boucle interne finie !)</span>", out: "1-1<br>1-2" },
+    { line: 5, mem: "i = 1 <span style='color:var(--secondary-color);'>(Boucle interne finie !)</span>", out: "1-1<br>1-2" },
     { line: 1, mem: "i = 2", out: "1-1<br>1-2" },
     { line: 2, mem: "i = 2, j = 1", out: "1-1<br>1-2" },
     { line: 3, mem: "i = 2, j = 1", out: "1-1<br>1-2<br>2-1" },
@@ -108,18 +108,18 @@ const traceEngine = {
     { line: null, mem: "", out: "" },
     { line: 1, mem: "score = 0", out: "" },
     { line: 2, mem: "score = 0, i = 1", out: "" },
-    { line: 3, mem: "score = 0, i = 1 <br><span style='color:var(--secondary-color);font-size:1rem;'>(1 MOD 2 == 0 est FAUX)</span>", out: "" },
+    { line: 3, mem: "score = 0, i = 1 <br><span style='color:var(--secondary-color);'>(1 MOD 2 == 0 est FAUX)</span>", out: "" },
     { line: 5, mem: "score = 0, i = 1", out: "" },
     { line: 6, mem: "score = 5, i = 1", out: "" },
     { line: 7, mem: "score = 5, i = 1", out: "" },
     { line: 8, mem: "score = 5, i = 1", out: "" },
     { line: 2, mem: "score = 5, i = 2", out: "" },
-    { line: 3, mem: "score = 5, i = 2 <br><span style='color:var(--secondary-color);font-size:1rem;'>(2 MOD 2 == 0 est VRAI)</span>", out: "" },
+    { line: 3, mem: "score = 5, i = 2 <br><span style='color:var(--secondary-color);'>(2 MOD 2 == 0 est VRAI)</span>", out: "" },
     { line: 4, mem: "score = 15, i = 2", out: "" },
     { line: 7, mem: "score = 15, i = 2", out: "" },
     { line: 8, mem: "score = 15, i = 2", out: "" },
     { line: 2, mem: "score = 15, i = 3", out: "" },
-    { line: 3, mem: "score = 15, i = 3 <br><span style='color:var(--secondary-color);font-size:1rem;'>(3 MOD 2 == 0 est FAUX)</span>", out: "" },
+    { line: 3, mem: "score = 15, i = 3 <br><span style='color:var(--secondary-color);'>(3 MOD 2 == 0 est FAUX)</span>", out: "" },
     { line: 6, mem: "score = 20, i = 3", out: "" },
     { line: 7, mem: "score = 20, i = 3", out: "" },
     { line: 8, mem: "score = 20, i = 3", out: "" },
@@ -167,6 +167,4 @@ deck.on('fragmenthidden', event => {
 });
 
 // Initialize state for tracing slides on load
-deck.on('ready', () => {
-  document.querySelectorAll('section[id^="slide-anim-"]').forEach(renderTrace);
-});
+document.querySelectorAll('section[id^="slide-anim-"]').forEach(renderTrace);
